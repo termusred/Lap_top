@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,9 +17,9 @@
   </head>
   <body>
     <nav>
-      <div class="nav_logo-part"><h1>Lap_top</h1></div>
+      <div class="nav_logo-part"><h1 style="cursor: default;">Lap_top</h1></div>
       <div class="nav_pages-part">
-        <div class="page">
+        <button id="home" class="page">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -29,8 +32,14 @@
               d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
             />
           </svg>
-        </div>
-        <div class="page">
+        </button>
+        <button id="info" class="page">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+          </svg>
+        </button>
+        <button id="geo" class="page">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -46,22 +55,8 @@
               d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
             />
           </svg>
-        </div>
-        <div class="page">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            fill="black"
-            class="bi bi-headset"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"
-            />
-          </svg>
-        </div>
-        <div class="page">
+        </button>
+        <button id="account" class="page">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -74,13 +69,13 @@
               d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
             />
           </svg>
-        </div>
+        </button>
       </div>
     </nav>
     <div class="MainPage">
       <div class="search-holder">
         <input type="search" placeholder="Search" />
-        <input type="submit" value="Search" />
+        <button type="button" class="btn btn-primary">Search</button>
       </div>
       <div class="LaptopsPlace"></div>
     </div>
@@ -127,7 +122,7 @@
     </div>
     <div class="Abduaziz">
       <div class="con1">
-        <div class="tg">
+        <button class="tg">
           <svg
             width="120"
             height="86"
@@ -159,16 +154,57 @@
               </linearGradient>
             </defs>
           </svg>
-
-          tg_abduaziz
-        </div>
-        <div class="support"></div>
+          <h4>Lap_top official tg bot</h4>
+        </button>
+        <button class="support">
+          <svg xmlns="http://www.w3.org/2000/svg" width="120" height="86" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
+            <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"/>
+          </svg>
+          <h4>Lap_top support line</h4>
+        </button>
       </div>
       <div class="con2">
-        <div class="map"></div>
-        <div class="adress"></div>
+        <div class="map" id="map"></div>
+        <div class="address"><h3>Askiya 25 25</h3></div>
       </div>
     </div>
+
+    <footer>
+      <div class="footer-bigcon">
+        <div class="bigcon_con1">
+          <h3>Laptop brands we have</h3>
+          <p>Asus
+          Acer<br>
+          Apple <br>
+          Lenovo <br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          .<br>
+          </p>
+        </div>
+        <div class="bigcon_con2">
+          <h3>Lap_top @2024-2025 all rights are claimed</h3>
+          <p>Contact our support line if your laptop brand wants to be part of our site or to be not</p>
+        </div>
+        <div class="bigcon_con3">
+          <h3>Our sponsors</h3>
+          <p>CoddyCamp <br>
+            Pepsi <br>
+            US Millitary aid <br>
+            . <br>
+            . <br>
+            . <br>
+            . <br>
+            . <br>
+            </p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

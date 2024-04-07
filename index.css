@@ -2,9 +2,12 @@
   padding: 0rem;
   margin: 0rem;
 }
-
+:root {
+  --theme: rgb(0, 0, 0);
+  --Lap: rgb(221, 221, 221);
+}
 body {
-  background-color: black;
+  background-color: var(--theme)
 }
 nav {
   position: sticky;
@@ -12,6 +15,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  z-index:  99999;
 }
 .nav_logo-part {
   color: white;
@@ -43,6 +47,7 @@ input[type="search"] {
   width: 50rem;
   height: 2rem;
   margin-right: 1rem;
+  z-index: 1;
 }
 input[type="submit"] {
   width: 7rem;
@@ -53,7 +58,8 @@ input[type="submit"] {
   margin-top: 2rem;
   width: 82rem;
   height: 30rem;
-  background-color: white;
+  border-radius: 2rem;
+  background-color: var(--Lap);
 }
 .AboutUs {
   display: flex;
@@ -66,13 +72,19 @@ input[type="submit"] {
 .card {
   margin-top: 12rem;
   height: 25rem;
+  z-index: 1;
+}
+.card-body {
+  background-color: var(--Lap);
+}
+.card-img-top{
+  max-height: 12rem;
 }
 .Abduaziz {
   display: flex;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: yellowgreen;
 }
 .con1 {
   width: 50%;
@@ -82,12 +94,75 @@ input[type="submit"] {
   gap: 3rem;
 }
 .tg {
+  display: flex;
+  align-items: center;
   width: 23rem;
-  height: 5rem;
-  background-color: red;
+  height: 8rem;
 }
 .support {
-  width: 25rem;
+  display: flex;
+  align-items: center;
+  width: 23rem;
   height: 8rem;
-  background-color: red;
+}
+.con2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2rem;
+  height: 100vh;
+}
+.map {
+  width: 35rem;
+  height: 24rem;
+  background-color: var(--Lap);
+}
+.address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35rem;
+  height: 8rem;
+  background-color: var(--Lap);
+}
+footer {
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height: 100vh;
+
+}
+::-webkit-scrollbar {
+  width: 0rem;
+  background-color: transparent;
+}
+.footer-bigcon {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  color: white;
+  background-color: rgb(37, 37, 37);
+}
+.bigcon_con1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+}
+.bigcon_con2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12rem;
+  width: 40%;
+  height: 100%;
+  background-color: rgb(65, 65, 65);
+}
+.bigcon_con3 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
 }

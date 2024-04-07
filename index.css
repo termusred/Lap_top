@@ -55,10 +55,12 @@ input[type="submit"] {
 }
 
 .LaptopsPlace {
+  display: flex;
   margin-top: 2rem;
   width: 82rem;
+  max-height: 60rem;
   height: 30rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   background-color: var(--Lap);
 }
 .AboutUs {
@@ -69,7 +71,12 @@ input[type="submit"] {
   width: 100%;
   height: 100vh;
 }
-.card {
+.pomechaniy {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  border: 1px solid black;
+}
+.abs {
   margin-top: 12rem;
   height: 25rem;
   z-index: 1;
@@ -98,12 +105,20 @@ input[type="submit"] {
   align-items: center;
   width: 23rem;
   height: 8rem;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--Lap);
 }
 .support {
   display: flex;
   align-items: center;
   width: 23rem;
   height: 8rem;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--Lap);
 }
 .con2 {
   display: flex;
@@ -112,17 +127,33 @@ input[type="submit"] {
   gap: 2rem;
   height: 100vh;
 }
+.footer-map {
+  width: 30%;
+  height: 100%;
+}
 .map {
-  width: 35rem;
-  height: 24rem;
+  width: 45rem;
+  height: 30rem;
   background-color: var(--Lap);
+}
+.inputHo {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+.addressInput{
+  width: 10rem;
+  height: 2rem;
+}
+.gimma {
+  padding: 1rem;
 }
 .address {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 35rem;
-  height: 8rem;
+  height: 14rem;
   background-color: var(--Lap);
 }
 footer {
@@ -158,11 +189,4 @@ footer {
   width: 40%;
   height: 100%;
   background-color: rgb(65, 65, 65);
-}
-.bigcon_con3 {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 30%;
-  height: 100%;
 }

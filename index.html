@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -56,7 +55,7 @@
             />
           </svg>
         </button>
-        <button id="account" class="page">
+        <!-- <button id="account" class="page">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -69,18 +68,19 @@
               d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
             />
           </svg>
-        </button>
+        </button> -->
       </div>
     </nav>
     <div class="MainPage">
       <div class="search-holder">
-        <input type="search" placeholder="Search" />
-        <button type="button" class="btn btn-primary">Search</button>
+        <input type="search" placeholder="Search" id="searchBar"/>
+        <button type="button" class="btn btn-primary" onclick="Search()">Search</button>
+        <button type="button" class="btn btn-primary" onclick="Clear()">Clear</button>
       </div>
-      <div class="LaptopsPlace"></div>
+      <div class="LaptopsPlace" id="LaptopsPlace"></div>
     </div>
     <div class="AboutUs">
-      <div class="card" style="width: 18rem">
+      <div class="abs card" style="width: 18rem">
         <img
           src="https://cdn.arstechnica.net/wp-content/uploads/2023/06/IMG_1134.jpeg"
           class="card-img-top"
@@ -93,7 +93,7 @@
           </p>
         </div>
       </div>
-      <div class="card" style="width: 18rem">
+      <div class="abs card" style="width: 18rem">
         <img
           src="https://olcha.uz/image/400x400/products/NtJt0jeSg0GfZRkJmfhxSmJn6ZNT8GRVPHAMbx2XaGMTy6uyrM3zAL9LDYy9.jpg"
           class="card-img-top"
@@ -106,7 +106,7 @@
           </p>
         </div>
       </div>
-      <div class="card" style="width: 18rem">
+      <div class="abs card" style="width: 18rem">
         <img
           src="https://cdn.vox-cdn.com/thumbor/00aJOJW0Wa62hmtE1Faeu5F-Zw4=/0x0:690x424/1400x1050/filters:focal(345x212:346x213)/cdn.vox-cdn.com/uploads/chorus_asset/file/6503433/Screen_Shot_2016-05-18_at_10.42.31_AM.0.png"
           class="card-img-top"
@@ -122,7 +122,7 @@
     </div>
     <div class="Abduaziz">
       <div class="con1">
-        <button class="tg">
+        <a class="tg" href="https://t.me/Shohakbarbot">
           <svg
             width="120"
             height="86"
@@ -155,17 +155,17 @@
             </defs>
           </svg>
           <h4>Lap_top official tg bot</h4>
-        </button>
-        <button class="support">
+        </a>
+        <a class="support" href="https://988lifeline.org/">
           <svg xmlns="http://www.w3.org/2000/svg" width="120" height="86" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
             <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"/>
           </svg>
           <h4>Lap_top support line</h4>
-        </button>
+        </a>
       </div>
       <div class="con2">
         <div class="map" id="map"></div>
-        <div class="address"><h3>Askiya 25 25</h3></div>
+        <div class="address"><h4 class="gimma">Enter your lat long cords</h4><div class="inputHo"><input type="text" class="addressInput" id="lat"><input type="text" class="addressInput" id="lng"></div> <button class="btn btn-primary" onclick="Adress()">Enter</button> <button class="btn btn-primary" style="margin-top: 1rem;" onclick="Fullscreen()">fullscreen</button></div>
       </div>
     </div>
 
@@ -188,27 +188,16 @@
           <h3>Lap_top @2024-2025 all rights are claimed</h3>
           <p>Contact our support line if your laptop brand wants to be part of our site or to be not</p>
         </div>
-        <div class="bigcon_con3">
-          <h3>Our sponsors</h3>
-          <p>CoddyCamp <br>
-            Pepsi <br>
-            US Millitary aid <br>
-            . <br>
-            . <br>
-            . <br>
-            . <br>
-            . <br>
-            </p>
-        </div>
+        <div class="footer-map" id="fmap"></div>
+
       </div>
     </footer>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
   </body>

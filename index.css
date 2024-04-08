@@ -56,6 +56,7 @@ input[type="submit"] {
 
 .LaptopsPlace {
   display: flex;
+  overflow: scroll;
   margin-top: 2rem;
   width: 82rem;
   max-height: 60rem;
@@ -72,6 +73,7 @@ input[type="submit"] {
   height: 100vh;
 }
 .pomechaniy {
+  flex-wrap: wrap;
   margin-top: 0.5rem;
   margin-left: 0.5rem;
   border: 1px solid black;

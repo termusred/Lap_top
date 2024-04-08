@@ -118,7 +118,7 @@ function Adress() {
         name:"macbook",
         secondaryname:"macbookair",
         desc:"Macbook air pro 2017. In good condition",
-        narxi:20.000,
+        narxi:1200,
         Photo: "https://cdn.arstechnica.net/wp-content/uploads/2023/06/IMG_1134.jpeg"
     },
     {
@@ -126,21 +126,78 @@ function Adress() {
         secondaryname:"lenovo",
         desc:"Lenovo ideapad gaming 3 in good condition",
         narxi:700,
-        Photo: "https://cdn.arstechnica.net/wp-content/uploads/2023/06/IMG_1134.jpeg"
+        Photo: "https://johnlewis.scene7.com/is/image/JohnLewis/Laptops-940x700-130423"
+    },
+    {
+      name:"hpvictus",
+      secondaryname:"hp",
+      desc:"Hp Victus in good condition",
+      narxi:700,
+      Photo: "https://static3.webx.pk/files/17888/Images/71k5nvcdaol.-sl1500--4012-1818990-020823111038154-17888-0-18-17888-0-050124024037942.jpg"
+    },
+    {
+      name:"hplowpower",
+      secondaryname:"hp",
+      desc:"Hp low power laptop in good condition",
+      narxi:300,
+      Photo: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/g-series/g16-7630/media-gallery/black/notebook-g16-7630-nt-black-gallery-1.psd?fmt=pjpg&pscan=auto&scl=1&wid=3500&hei=2625&qlt=100,1&resMode=sharp2&size=3500,2625&chrss=full&imwidth=5000"
     },
     {
         name:"aceraspire5",
         secondaryname:"acer",
         desc:'Acer aspire 5 a laptop for you in good condition',
         narxi:600,
-        Photo: "https://cdn.arstechnica.net/wp-content/uploads/2023/06/IMG_1134.jpeg"
+        Photo: "https://i.pcmag.com/imagery/reviews/01DwPnq2ew5930qO5p4LXWH-1.fit_lim.size_840x473.v1677608790.jpg"
     },
     {
         name:"aceraspire3",
         secondaryname:"acer",
         desc:'Acer aspire 3 a laptop for you in good condition',
         narxi:400,
-        Photo: "https://cdn.arstechnica.net/wp-content/uploads/2023/06/IMG_1134.jpeg"
+        Photo: "https://i.pcmag.com/imagery/reviews/01DwPnq2ew5930qO5p4LXWH-1.fit_lim.size_840x473.v1677608790.jpg"
+    },
+
+    {
+      name:"macbook",
+      secondaryname:"macbookpro",
+      desc:"Macbook pro. In good condition. Basic pack + mouse included",
+      narxi:2000,
+      Photo: "https://cdn.arstechnica.net/wp-content/uploads/2023/06/IMG_1134.jpeg"
+    },
+    {
+      name:"lenovolegion5",
+      secondaryname:"lenovo",
+      desc:"Lenovo  Legion 5 in good condition",
+      narxi:700,
+      Photo: "https://i.pcmag.com/imagery/roundups/00m26Dq072QbQhc8LkAOuZ0-30..v1696527490.jpg"
+    },
+    {
+      name:"lenovothinkpad3",
+      secondaryname:"lenovo",
+      desc:"Lenovo  ThinkPad 3 in good condition",
+      narxi:700,
+      Photo: "https://images.summitmedia-digital.com/spotph/images/2022/06/30/guide-to-everyhing-laptop-640-1656580338.jpg"
+    },
+    {
+      name:"hpomen",
+      secondaryname:"hp",
+      desc:"Hp Omen in good condition",
+      narxi:700,
+      Photo: "https://cdn.thewirecutter.com/wp-content/media/2023/06/businesslaptops-2048px-0943.jpg"
+    },
+    {
+      name:"dellalienware",
+      secondaryname:"alienware",
+      desc:'Alienware for you in good condition',
+      narxi:600,
+      Photo: "https://www.pcworld.com/wp-content/uploads/2024/03/20220324_103646-1-1.jpg?quality=50&strip=all"
+    },
+    {
+      name:"aceraspire3",
+      secondaryname:"acer",
+      desc:'Acer aspire 3 a laptop for you in good condition',
+      narxi:400,
+      Photo: "https://johnlewis.scene7.com/is/image/JohnLewis/Laptops-940x700-130423"
     },
 ]
 function Clear() {
@@ -148,9 +205,12 @@ function Clear() {
     search.value = ""
 }
 function Search(){
+  var FirstFilter = search.value.toLowerCase();
+  var SecondFilter = FirstFilter.replace(/\s/g, "");
+  if(SecondFilter !== ""){
+
+  
     document.getElementById("LaptopsPlace").innerHTML=""
-    var FirstFilter = search.value.toLowerCase();
-    var SecondFilter = FirstFilter.replace(/\s/g, "");
 
     var found = false;
     var existingLaptops = []
@@ -179,4 +239,5 @@ function Search(){
     if (!found) {
         document.getElementById("LaptopsPlace").innerHTML = "<h1>The laptop you are looking for is not listed in our web site</h1>";
     }
+  }
 }

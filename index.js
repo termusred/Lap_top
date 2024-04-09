@@ -115,18 +115,18 @@ function Adress() {
 // search system
   const tovarlar = [
     {
-        name:"macbook",
-        secondaryname:"macbookair",
-        desc:"Macbook air pro 2017. In good condition",
-        narxi:1200,
-        Photo: "https://cdn.arstechnica.net/wp-content/uploads/2023/06/IMG_1134.jpeg"
+      name:"macbookair",
+      secondaryname:"macbookair",
+      desc:"Macbook air pro 2017. In good condition",
+      narxi:1200,
+      Photo: "https://cdn.arstechnica.net/wp-content/uploads/2023/06/IMG_1134.jpeg"
     },
     {
-        name:"lenovoideapadgaming3",
-        secondaryname:"lenovo",
-        desc:"Lenovo ideapad gaming 3 in good condition",
-        narxi:700,
-        Photo: "https://johnlewis.scene7.com/is/image/JohnLewis/Laptops-940x700-130423"
+      name:"lenovoideapadgaming3",
+      secondaryname:"lenovo",
+      desc:"Lenovo ideapad gaming 3 in good condition",
+      narxi:700,
+      Photo: "https://johnlewis.scene7.com/is/image/JohnLewis/Laptops-940x700-130423"
     },
     {
       name:"hpvictus",
@@ -143,23 +143,23 @@ function Adress() {
       Photo: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/g-series/g16-7630/media-gallery/black/notebook-g16-7630-nt-black-gallery-1.psd?fmt=pjpg&pscan=auto&scl=1&wid=3500&hei=2625&qlt=100,1&resMode=sharp2&size=3500,2625&chrss=full&imwidth=5000"
     },
     {
-        name:"aceraspire5",
-        secondaryname:"acer",
-        desc:'Acer aspire 5 a laptop for you in good condition',
-        narxi:600,
-        Photo: "https://i.pcmag.com/imagery/reviews/01DwPnq2ew5930qO5p4LXWH-1.fit_lim.size_840x473.v1677608790.jpg"
+      name:"aceraspire5",
+      secondaryname:"acer",
+      desc:'Acer aspire 5 a laptop for you in good condition',
+      narxi:600,
+      Photo: "https://i.pcmag.com/imagery/reviews/01DwPnq2ew5930qO5p4LXWH-1.fit_lim.size_840x473.v1677608790.jpg"
     },
     {
-        name:"aceraspire3",
-        secondaryname:"acer",
-        desc:'Acer aspire 3 a laptop for you in good condition',
-        narxi:400,
-        Photo: "https://i.pcmag.com/imagery/reviews/01DwPnq2ew5930qO5p4LXWH-1.fit_lim.size_840x473.v1677608790.jpg"
+      name:"aceraspire3",
+      secondaryname:"acer",
+      desc:'Acer aspire 3 a laptop for you in good condition',
+      narxi:400,
+      Photo: "https://i.pcmag.com/imagery/reviews/01DwPnq2ew5930qO5p4LXWH-1.fit_lim.size_840x473.v1677608790.jpg"
     },
 
     {
-      name:"macbook",
-      secondaryname:"macbookpro",
+      name:"macbookpro",
+      secondaryname:"apple",
       desc:"Macbook pro. In good condition. Basic pack + mouse included",
       narxi:2000,
       Photo: "https://cdn.arstechnica.net/wp-content/uploads/2023/06/IMG_1134.jpeg"

@@ -59,7 +59,6 @@ input[type="submit"] {
   overflow: scroll;
   margin-top: 2rem;
   width: 82rem;
-  max-height: 60rem;
   height: 30rem;
   border-radius: 1rem;
   background-color: var(--Lap);
@@ -73,6 +72,8 @@ input[type="submit"] {
   height: 100vh;
 }
 .pomechaniy {
+  min-width: 10rem;
+  max-height: 22rem;
   flex-wrap: wrap;
   margin-top: 0.5rem;
   margin-left: 0.5rem;
@@ -87,7 +88,8 @@ input[type="submit"] {
   background-color: var(--Lap);
 }
 .card-img-top{
-  max-height: 12rem;
+  max-height: 12rem !important;
+  height: 10rem;
 }
 .Abduaziz {
   display: flex;
@@ -166,8 +168,7 @@ footer {
 
 }
 ::-webkit-scrollbar {
-  width: 0rem;
-  background-color: transparent;
+  width: 0px;
 }
 .footer-bigcon {
   display: flex;

@@ -16,7 +16,7 @@ home.addEventListener(`click`, () => {
 
 info.addEventListener(`click`, () => {
     window.scrollTo({
-        top: 820,
+        top: 790,
         left: 0,
         behavior: "smooth",
       });
@@ -33,7 +33,7 @@ geo.addEventListener(`click`, () => {
 // map
 var map = L.map('map').setView([41.289912, 69.249490], 18);
 var fmap = L.map('fmap').setView([41.289912, 69.249490], 18);
-L.marker([41.289912, 69.249490]).addTo(fmap)
+L.marker([41.289912, 69.249490]).bindPopup(`Our place will be open from 7:00 am to 12:00 pm`).addTo(fmap)
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -229,6 +229,7 @@ function Search(){
                 />
                 <div class="card-body">
                   <p class="card-text">${el.desc} and costs you ${el.narxi}</p>
+                  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-primary">Go get one</a>
                 </div>
                 </div>
                 `);
